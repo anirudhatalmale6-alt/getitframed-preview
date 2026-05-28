@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prints &amp; Fine Art Photo Printing | Get It Framed NI</title>
-    <meta name="description" content="Professional photo printing services in Portglenone, Co. Antrim. Standard, large-format, fine art and giclée prints on premium papers. Get It Framed NI.">
+    <title>Gallery | Get It Framed NI</title>
+    <meta name="description" content="Browse our portfolio of professional framing, printing, canvas and mounting work. Get It Framed NI, Portglenone, Co. Antrim.">
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -68,8 +68,6 @@
             padding: 10px 22px !important; border: none; margin-left: 8px;
         }
         .nav-cta:hover { background: var(--teal-dark) !important; }
-        .mobile-toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
-        .mobile-toggle span { display: block; width: 24px; height: 2px; background: var(--ink-deep); margin: 5px 0; }
 
         .btn {
             display: inline-block; padding: 14px 28px; text-decoration: none;
@@ -122,29 +120,7 @@
             color: var(--white); font-size: 1rem; margin-bottom: 1.2rem;
         }
 
-        /* ---- Image Frame (from homepage) ---- */
-        .image-frame {
-            background: white; padding: 1.2rem; border: 0.5px solid #d1d5db;
-            position: relative; box-shadow: 0 15px 45px rgba(0,0,0,0.04);
-        }
-        .image-frame::after {
-            content: ''; position: absolute; top: 8px; left: 8px; right: 8px; bottom: 8px;
-            border: 0.5px solid var(--rose); pointer-events: none;
-        }
-        .image-frame img { width: 100%; height: auto; display: block; }
-
-        /* ---- About Bullets (from homepage) ---- */
-        .about-bullets { list-style: none; padding: 0; margin: 1.5rem 0 0; }
-        .about-bullets li {
-            padding: 7px 0 7px 26px; position: relative;
-            color: var(--violet); font-size: 0.9rem;
-        }
-        .about-bullets li::before {
-            content: ''; position: absolute; left: 0; top: 14px;
-            width: 10px; height: 10px; background: var(--teal); border-radius: 50%;
-        }
-
-        /* ---- Hero Image Section ---- */
+        /* ---- Hero Banner ---- */
         .hero-banner {
             position: relative; width: 100%; height: 200px; overflow: hidden;
         }
@@ -173,120 +149,87 @@
             letter-spacing: 0.5px;
         }
 
-        /* ---- Two Column Intro ---- */
-        .intro-section { padding: 5rem 0; background: var(--white); }
-        .intro-grid {
-            display: grid; grid-template-columns: 1.5fr 1fr; gap: 4rem; align-items: center;
+        /* ---- Gallery Section ---- */
+        .gallery-intro {
+            padding: 2rem 0 1rem; text-align: center;
         }
-        .intro-text-col p {
-            color: var(--violet); font-size: 0.95rem; margin: 0 0 1.5rem; line-height: 1.8;
+        .gallery-intro h2 {
+            font-size: 2.4rem; margin-bottom: 0.6rem;
         }
-        .intro-text-col p:last-child { margin-bottom: 0; }
-
-        /* ---- Services / Features Grid ---- */
-        .services-section { padding: 5rem 0; }
-        .services-section h2 { font-size: 2rem; margin-bottom: 0.8rem; }
-        .services-section .intro-text {
-            color: var(--violet); font-size: 0.95rem; max-width: 780px; margin-bottom: 3rem;
+        .gallery-intro p {
+            color: var(--violet); font-size: 0.95rem; max-width: 550px; margin: 0 auto;
         }
-        .features-grid {
-            display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;
+        .gallery-filters {
+            display: flex; justify-content: center; gap: 0.5rem; flex-wrap: wrap;
+            padding: 0 0 3rem;
         }
-        .feature-card {
-            background: var(--white); border: 0.5px solid #e0e0e0;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.04); overflow: hidden;
-            transition: transform 0.3s, box-shadow 0.3s;
+        .filter-btn {
+            padding: 8px 20px; border: 1px solid #d1d5db; background: var(--white);
+            color: var(--violet); font-size: 0.75rem; font-weight: 600;
+            text-transform: uppercase; letter-spacing: 1.2px; cursor: pointer;
+            transition: 0.3s; font-family: 'Inter', sans-serif;
         }
-        .feature-card:hover {
-            transform: translateY(-4px); box-shadow: 0 12px 36px rgba(0,0,0,0.08);
+        .filter-btn:hover, .filter-btn.active {
+            background: var(--teal); color: var(--white); border-color: var(--teal);
         }
-        .feature-card-img {
-            width: 100%; height: 200px; object-fit: cover; display: block;
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 6px;
+            padding-bottom: 5rem;
         }
-        .feature-card-body { padding: 1.8rem; }
-        .feature-card h3 { font-size: 1.2rem; margin-bottom: 0.7rem; }
-        .feature-card p { color: var(--violet); font-size: 0.9rem; margin: 0; line-height: 1.7; }
-
-        /* ---- Why Choose Us (reversed two-col) ---- */
-        .why-section { padding: 5rem 0; background: var(--white); }
-        .why-grid {
-            display: grid; grid-template-columns: 1fr 1.2fr; gap: 4rem; align-items: center;
+        .gallery-item {
+            position: relative; overflow: hidden; cursor: pointer;
+            aspect-ratio: 1; background: #ddd;
         }
-        .why-text-col h2 { font-size: 2rem; margin-bottom: 1.2rem; }
-        .why-text-col p {
-            color: var(--violet); font-size: 0.95rem; margin: 0 0 1.3rem; line-height: 1.8;
-        }
-
-        /* ---- Full-Width Image Break ---- */
-        .image-break {
-            width: 100%; height: 200px; overflow: hidden;
-        }
-        .image-break img {
+        .gallery-item.tall { grid-row: span 2; aspect-ratio: auto; }
+        .gallery-item.wide { grid-column: span 2; aspect-ratio: auto; }
+        .gallery-item img {
             width: 100%; height: 100%; object-fit: cover; display: block;
+            transition: transform 0.5s ease;
+        }
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+        .gallery-item .overlay {
+            position: absolute; bottom: 0; left: 0; right: 0;
+            padding: 1.5rem 1rem 1rem;
+            background: linear-gradient(transparent, rgba(0,0,0,0.7));
+            opacity: 0; transition: opacity 0.3s ease;
+        }
+        .gallery-item:hover .overlay { opacity: 1; }
+        .overlay span {
+            color: var(--white); font-size: 0.78rem; font-weight: 500;
+            letter-spacing: 0.5px;
         }
 
-        /* ---- Shipping Section ---- */
-        .shipping-section {
-            padding: 5rem 0; text-align: center;
+        /* ---- Lightbox ---- */
+        .lightbox {
+            display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.92); z-index: 9999;
+            align-items: center; justify-content: center;
         }
-        .shipping-section h2 { font-size: 2rem; margin-bottom: 1.5rem; }
-        .shipping-section p {
-            color: var(--violet); font-size: 0.95rem; max-width: 750px;
-            margin: 0 auto 1.5rem; line-height: 1.8;
+        .lightbox.active { display: flex; }
+        .lightbox img {
+            max-width: 90%; max-height: 85vh; object-fit: contain;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.5);
         }
-        .shipping-badges {
-            display: flex; gap: 1.2rem; justify-content: center; margin-top: 2rem; flex-wrap: wrap;
+        .lightbox-close {
+            position: absolute; top: 20px; right: 30px;
+            color: white; font-size: 2.5rem; cursor: pointer;
+            background: none; border: none; line-height: 1;
         }
-        .shipping-badge {
-            display: inline-flex; align-items: center; gap: 8px;
-            background: var(--teal); color: var(--white);
-            padding: 10px 22px; border-radius: 50px;
-            font-size: 0.82rem; font-weight: 600; letter-spacing: 0.3px;
-        }
-        .shipping-badge svg { width: 18px; height: 18px; fill: var(--white); flex-shrink: 0; }
-
-        /* ---- Pre-CTA ---- */
-        .pre-cta { padding: 4rem 0; background: var(--white); text-align: center; }
-        .pre-cta p {
-            color: var(--violet); font-size: 1.05rem; max-width: 700px;
-            margin: 0 auto 1.3rem; line-height: 1.8;
+        .lightbox-close:hover { color: var(--rose); }
+        .lightbox-caption {
+            position: absolute; bottom: 30px; text-align: center; width: 100%;
+            color: rgba(255,255,255,0.7); font-size: 0.85rem;
         }
 
-        /* ---- Responsive ---- */
-        @media (max-width: 900px) {
-            .services-section [style*="grid-template-columns: repeat(4"] {
-                grid-template-columns: repeat(2, 1fr) !important;
-            }
-        }
         @media (max-width: 768px) {
-            .top-bar .container { justify-content: center; text-align: center; }
-            .top-bar-right { display: none; }
-            nav { display: none; }
-            .mobile-toggle { display: block; }
-            nav.open {
-                display: flex; flex-direction: column; position: absolute;
-                top: 80px; left: 0; right: 0; background: var(--white);
-                border-bottom: 2px solid var(--teal); padding: 16px;
-                box-shadow: 0 8px 24px rgba(0,0,0,0.1); z-index: 999;
-            }
-            .hero-overlay h1 { font-size: 1.9rem; }
-            .hero-banner { height: 320px; }
-            .intro-grid { grid-template-columns: 1fr; gap: 2.5rem; }
-            .intro-image-col { order: -1; }
-            .services-section [style*="grid-template-columns: repeat(4"] {
-                grid-template-columns: 1fr !important;
-            }
-            .why-grid { grid-template-columns: 1fr; gap: 2.5rem; }
-            .why-image-col { order: -1; }
-            [style*="grid-template-columns: 1fr 1fr"] {
-                grid-template-columns: 1fr !important;
-            }
-            .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
-        }
-        @media (max-width: 480px) {
-            .footer-grid { grid-template-columns: 1fr; }
-            .hero-overlay h1 { font-size: 1.6rem; }
-            .hero-banner { height: 280px; }
+            .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+            .gallery-item.wide { grid-column: span 2; }
+            .gallery-intro h2 { font-size: 1.8rem; }
+            .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
         }
     </style>
 </head>
@@ -297,6 +240,7 @@
         <div class="top-bar-left">
             <span>&#9742; <a href="tel:02825882706">028 2588 2706</a> / <a href="tel:07763842761">077 6384 2761</a></span>
             <span>&#9993; <a href="mailto:GetItFramedNI@gmail.com">Email Us</a></span>
+            <span>&#9906; Portglenone, Co. Antrim, Northern Ireland</span>
         </div>
         <div class="top-bar-right">Trade partner for photographers &amp; artists</div>
     </div>
@@ -310,7 +254,7 @@
         <nav id="mainNav">
             <a href="index.html#about">About</a>
             <a href="index.html#services">Services</a>
-            <a href="gallery.html">Gallery</a>
+            <a href="index.html">Gallery</a>
             <a href="index.html">Trade</a>
             <a href="index.html#contact" class="nav-cta">Get in Touch</a>
         </nav>
@@ -320,99 +264,102 @@
     </div>
 </header>
 
-<!-- SECTION 1: Hero Image Banner -->
-<section class="hero-banner">
-    <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=1400&h=600&fit=crop" alt="Art prints and photography displayed in a gallery setting">
+<div class="hero-banner">
+    <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=1400&h=400&fit=crop" alt="Gallery">
     <div class="hero-overlay">
         <div class="hero-breadcrumb">
-            <a href="index.html">Home</a><span>&rsaquo;</span><a href="index.html#services">Services</a><span>&rsaquo;</span>Prints
+            <a href="index.html">Home</a><span>&rsaquo;</span>Gallery
         </div>
-        <h1>Prints &amp; Fine Art Photo Printing</h1>
+        <h1>Gallery</h1>
     </div>
-</section>
-
-
-<!-- SECTION 3: Services / Features Grid -->
-<section class="services-section">
-    <div class="container">
-        <span class="section-label">What We Offer</span>
-        <h2>High-Quality Printing Services Tailored to You</h2>
-        <p class="intro-text">We don't believe in one-size-fits-all printing. Different images call for different textures, weights, and finishes. We offer a comprehensive range of professional photo printing options, including:</p>
-        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px;">
-            <div style="padding: 1.8rem 1.5rem; background: var(--teal); color: var(--white); display: flex; flex-direction: column; align-items: center; text-align: center; min-height: 220px; transition: transform 0.3s; cursor: default;" onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform=''">
-                <h3 style="font-family: 'Libre Baskerville', serif; font-size: 1.05rem; margin-bottom: 1rem;">Standard &amp; Custom Sizes</h3>
-                <p style="font-size: 0.82rem; line-height: 1.55; opacity: 0.9;">From small pocket prints and standard desk-frame sizes to striking, large-format statement pieces for your living room or office.</p>
-            </div>
-            <div style="padding: 1.8rem 1.5rem; background: var(--rose); color: var(--white); display: flex; flex-direction: column; align-items: center; text-align: center; min-height: 220px; transition: transform 0.3s; cursor: default;" onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform=''">
-                <h3 style="font-family: 'Libre Baskerville', serif; font-size: 1.05rem; margin-bottom: 1rem;">Premium Paper Finishes</h3>
-                <p style="font-size: 0.82rem; line-height: 1.55; opacity: 0.9;">Choose from classic high-gloss for vibrant contrast, smooth satin/lustre to minimize glare, or heavy matte for a contemporary look.</p>
-            </div>
-            <div style="padding: 1.8rem 1.5rem; background: var(--violet); color: var(--white); display: flex; flex-direction: column; align-items: center; text-align: center; min-height: 220px; transition: transform 0.3s; cursor: default;" onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform=''">
-                <h3 style="font-family: 'Libre Baskerville', serif; font-size: 1.05rem; margin-bottom: 1rem;">Fine Art &amp; Gicl&eacute;e Printing</h3>
-                <p style="font-size: 0.82rem; line-height: 1.55; opacity: 0.9;">Perfect for artists, illustrators, and photographers demanding archival-quality prints with flawless colour accuracy and longevity.</p>
-            </div>
-            <div style="padding: 1.8rem 1.5rem; background: var(--ink-deep); color: var(--white); display: flex; flex-direction: column; align-items: center; text-align: center; min-height: 220px; transition: transform 0.3s; cursor: default;" onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform=''">
-                <h3 style="font-family: 'Libre Baskerville', serif; font-size: 1.05rem; margin-bottom: 1rem;">Flexible Presentation Options</h3>
-                <p style="font-size: 0.82rem; line-height: 1.55; opacity: 0.9;">Order your prints loose, paired perfectly with custom-cut photo mounts, or ready to be handed right over to our in-house framing team.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- SECTION 4: Why Choose Us (reversed layout) -->
-<section class="why-section">
-    <div class="container">
-        <div class="why-grid">
-            <div class="why-image-col">
-                <div class="image-frame">
-                    <img src="https://images.unsplash.com/photo-1594909122845-11baa439b7bf?w=500&h=600&fit=crop" alt="Professional print studio with colour-calibrated equipment">
-                </div>
-            </div>
-            <div class="why-text-col">
-                <span class="section-label">The Difference</span>
-                <h2>Why Choose<br>Get It Framed NI?</h2>
-                <p>The high street photo booth or cheap online print factories simply cannot match the human eye. When you bring your printing projects to us, you are benefiting from fifteen years of colour calibration, paper knowledge, and technical expertise.</p>
-                <p>We review your files to catch low-resolution warnings or awkward cropping before ink ever touches paper. We use premium, fade-resistant inks and archival-grade papers, meaning your prints will look just as stunning decades from now as they do the day you pick them up.</p>
-                <ul class="about-bullets">
-                    <li>Fifteen years of colour calibration expertise</li>
-                    <li>Premium, fade-resistant inks &amp; archival-grade papers</li>
-                    <li>Every file reviewed before printing begins</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- SECTION 5: Full-Width Image Break -->
-<div class="image-break">
-    <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=1400&h=400&fit=crop" alt="Colourful art prints drying in a professional studio">
 </div>
 
-<!-- SECTION 6: Shipping Section -->
-<section class="shipping-section">
+<section class="gallery-intro">
     <div class="container">
-        <span class="section-label">Delivery</span>
-        <h2>Serving County Antrim &amp; Shipping Worldwide</h2>
-        <p>Our studio is a proud fixture of the Portglenone community. We love welcoming local clients from across County Antrim, Ballymena, Magherafelt, and beyond into our gallery to see and feel our paper samples in person.</p>
-        <p>However, distance is no barrier to premium quality. If you are ordering from further afield, we package prints with extreme care in heavy-duty, protective tubes or flat-packs, safely shipping our professional prints to customers worldwide.</p>
-        <div class="shipping-badges">
-            <span class="shipping-badge">
-                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"/></svg>
-                Local Collection
-            </span>
-            <span class="shipping-badge">
-                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
-                Worldwide Shipping
-            </span>
+        <h2 class="serif">From our studio to you</h2>
+        <p>Browse a selection of prints, mounts, frames, canvases and more from our Portglenone studio.</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+
+        <div class="gallery-grid">
+            <div class="gallery-item tall" data-category="framing" onclick="openLightbox(this)">
+                <img src="https://images.unsplash.com/photo-1605721911519-3dfeb3be25e7?w=600&h=900&fit=crop" alt="Custom picture frame">
+                <div class="overlay"><span>Custom frame &mdash; oak finish</span></div>
+            </div>
+            <div class="gallery-item" data-category="prints" onclick="openLightbox(this)">
+                <img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=600&h=600&fit=crop" alt="Fine art print">
+                <div class="overlay"><span>Fine art gicl&eacute;e print</span></div>
+            </div>
+            <div class="gallery-item" data-category="canvas" onclick="openLightbox(this)">
+                <img src="https://images.unsplash.com/photo-1541961017774-22349e4a1262?w=600&h=600&fit=crop" alt="Canvas print">
+                <div class="overlay"><span>Stretched canvas</span></div>
+            </div>
+            <div class="gallery-item" data-category="framing" onclick="openLightbox(this)">
+                <img src="https://images.unsplash.com/photo-1582555172866-f73bb12a2ab3?w=600&h=600&fit=crop" alt="Black frame">
+                <div class="overlay"><span>Matt black frame</span></div>
+            </div>
+
+            <div class="gallery-item" data-category="mounting" onclick="openLightbox(this)">
+                <img src="https://images.unsplash.com/photo-1452587925148-ce544e77e70d?w=600&h=600&fit=crop" alt="Photo mount">
+                <div class="overlay"><span>Double mount &mdash; cream &amp; ivory</span></div>
+            </div>
+            <div class="gallery-item wide" data-category="prints" onclick="openLightbox(this)">
+                <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&h=600&fit=crop" alt="Landscape print">
+                <div class="overlay"><span>Panoramic landscape print</span></div>
+            </div>
+            <div class="gallery-item" data-category="framing" onclick="openLightbox(this)">
+                <img src="https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?w=600&h=600&fit=crop" alt="Framed artwork">
+                <div class="overlay"><span>Gallery frame &mdash; white wash</span></div>
+            </div>
+
+            <div class="gallery-item" data-category="canvas" onclick="openLightbox(this)">
+                <img src="https://images.unsplash.com/photo-1547891654-e66ed7ebb968?w=600&h=600&fit=crop" alt="Canvas wall art">
+                <div class="overlay"><span>Canvas wall display</span></div>
+            </div>
+            <div class="gallery-item" data-category="engraving" onclick="openLightbox(this)">
+                <img src="https://images.unsplash.com/photo-1572947650440-e8a97ef053b2?w=600&h=600&fit=crop" alt="Laser engraving">
+                <div class="overlay"><span>Laser engraved plaque</span></div>
+            </div>
+            <div class="gallery-item tall" data-category="framing" onclick="openLightbox(this)">
+                <img src="https://images.unsplash.com/photo-1580136579312-94651dfd596d?w=600&h=900&fit=crop" alt="Portrait frame">
+                <div class="overlay"><span>Portrait frame &mdash; walnut</span></div>
+            </div>
+            <div class="gallery-item" data-category="prints" onclick="openLightbox(this)">
+                <img src="https://images.unsplash.com/photo-1549490349-8643362247b5?w=600&h=600&fit=crop" alt="Photo print">
+                <div class="overlay"><span>Lustre photo print</span></div>
+            </div>
+
+            <div class="gallery-item" data-category="mounting" onclick="openLightbox(this)">
+                <img src="https://images.unsplash.com/photo-1561214115-f2f134cc4912?w=600&h=600&fit=crop" alt="Multi aperture mount">
+                <div class="overlay"><span>Multi-aperture mount</span></div>
+            </div>
+            <div class="gallery-item" data-category="canvas" onclick="openLightbox(this)">
+                <img src="https://images.unsplash.com/photo-1579783928621-7a13d66a62d1?w=600&h=600&fit=crop" alt="Canvas triptych">
+                <div class="overlay"><span>Split canvas triptych</span></div>
+            </div>
+            <div class="gallery-item wide" data-category="framing" onclick="openLightbox(this)">
+                <img src="https://images.unsplash.com/photo-1544967082-d9d25d867d66?w=1200&h=600&fit=crop" alt="Gallery wall">
+                <div class="overlay"><span>Gallery wall arrangement</span></div>
+            </div>
+            <div class="gallery-item" data-category="prints" onclick="openLightbox(this)">
+                <img src="https://images.unsplash.com/photo-1518998053901-5348d3961a04?w=600&h=600&fit=crop" alt="Abstract print">
+                <div class="overlay"><span>Abstract fine art print</span></div>
+            </div>
+            <div class="gallery-item" data-category="engraving" onclick="openLightbox(this)">
+                <img src="https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=600&h=600&fit=crop" alt="Engraved wood">
+                <div class="overlay"><span>Engraved wooden keepsake</span></div>
+            </div>
         </div>
     </div>
 </section>
 
-
-<section class="cta-section" id="contact">
+<section class="cta-section">
     <div class="container">
-        <h2>Ready to get started?</h2>
-        <p>Bring in your piece or get in touch.<br>We're happy to advise on the best approach for your project.</p>
+        <h2 class="serif">Like what you see?</h2>
+        <p>Bring in your artwork, photos or ideas and we'll help bring them to life.</p>
         <div class="cta-buttons">
             <a href="mailto:GetItFramedNI@gmail.com" class="btn btn-primary">Get in Touch</a>
             <a href="tel:02825882706" class="btn btn-secondary">Call 028 2588 2706</a>
@@ -486,6 +433,35 @@
         </div>
     </div>
 </footer>
+
+<div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+    <button class="lightbox-close" onclick="closeLightbox(event)">&times;</button>
+    <img id="lightbox-img" src="" alt="">
+    <div class="lightbox-caption" id="lightbox-caption"></div>
+</div>
+
+<script>
+function openLightbox(el){
+    var img=el.querySelector('img');
+    var cap=el.querySelector('.overlay span');
+    document.getElementById('lightbox-img').src=img.src.replace('w=600','w=1400').replace('h=600','h=1400').replace('h=900','h=1400');
+    document.getElementById('lightbox-caption').textContent=cap?cap.textContent:'';
+    document.getElementById('lightbox').classList.add('active');
+    document.body.style.overflow='hidden';
+}
+function closeLightbox(e){
+    if(e.target.id==='lightbox'||e.target.classList.contains('lightbox-close')){
+        document.getElementById('lightbox').classList.remove('active');
+        document.body.style.overflow='';
+    }
+}
+document.addEventListener('keydown',function(e){
+    if(e.key==='Escape'){
+        document.getElementById('lightbox').classList.remove('active');
+        document.body.style.overflow='';
+    }
+});
+</script>
 
 </body>
 </html>

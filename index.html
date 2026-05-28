@@ -54,7 +54,7 @@
             position: sticky; top: 0; z-index: 1000;
         }
         .nav-wrapper { display: flex; justify-content: space-between; align-items: center; }
-        .brand img { height: 58px; width: auto; }
+        .brand img { height: 68px; width: auto; }
         nav { display: flex; align-items: center; gap: 0.5rem; }
         nav a {
             text-decoration: none; color: var(--ink-deep);
@@ -72,7 +72,7 @@
 
         .hero {
             display: grid; grid-template-columns: 1.2fr 1fr;
-            gap: 5rem; align-items: center; padding: 7rem 0;
+            gap: 5rem; align-items: center; padding: 3.5rem 0;
         }
         .hero h2 { font-size: 3rem; line-height: 1.12; margin-bottom: 1.5rem; }
         .hero h2 em { color: var(--rose); font-style: normal; }
@@ -98,7 +98,7 @@
         }
         .image-frame img { width: 100%; height: auto; display: block; }
 
-        .about-section { padding: 7rem 0; background: var(--white); }
+        .about-section { padding: 3.5rem 0; background: var(--white); }
         .about-grid {
             display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center;
         }
@@ -120,7 +120,7 @@
         .about-image img { width: 100%; height: auto; display: block; }
 
         /* --- GA Frames Style Service Cards --- */
-        .services-section { padding: 7rem 0; background: var(--ink-deep); }
+        .services-section { padding: 3.5rem 0; background: var(--ink-deep); }
         .services-section .section-label { color: var(--rose); }
         .services-section .services-heading { color: var(--white); margin-bottom: 0.6rem; }
         .services-section .services-sub { color: rgba(255,255,255,0.6); font-size: 0.95rem; margin-bottom: 3rem; }
@@ -134,14 +134,17 @@
             min-height: 420px;
             border-radius: 12px;
             overflow: hidden;
+            cursor: pointer; position: relative;
+            transition: transform 0.3s;
         }
+        .ga-card:hover { transform: translateY(-4px); }
         .ga-card-label {
             font-size: 0.68rem; font-weight: 600; text-transform: uppercase;
             letter-spacing: 2px; opacity: 0.85; margin-bottom: 0.3rem;
         }
         .ga-card h3 {
-            font-family: 'Libre Baskerville', serif; font-size: 1.15rem;
-            font-weight: 700; margin-bottom: 1rem; text-transform: uppercase;
+            font-family: 'Libre Baskerville', serif; font-size: 1.05rem; text-align: center;
+            font-weight: 700; margin-bottom: 1rem;
             min-height: 3.2rem; overflow-wrap: break-word;
         }
         .ga-card-img {
@@ -150,14 +153,14 @@
             border-radius: 6px;
         }
         .ga-card p {
-            font-size: 0.82rem; line-height: 1.55; opacity: 0.9; flex: 1;
+            font-size: 0.82rem; line-height: 1.55; opacity: 0.9; flex: 1; text-align: center;
         }
         .ga-card-btn {
             display: inline-block; margin-top: 1rem; padding: 8px 18px;
             border: 1.5px solid var(--white); color: var(--white);
             font-size: 0.72rem; font-weight: 600; text-transform: uppercase;
             letter-spacing: 1.5px; text-decoration: none;
-            transition: 0.3s; align-self: flex-start;
+            transition: 0.3s; align-self: center;
             background: transparent;
         }
         .ga-card-btn:hover { background: var(--white); color: var(--ink-deep); }
@@ -175,7 +178,7 @@
         .bg-steel { background: #5B7B8F; }
 
         .process-section {
-            padding: 7rem 0; background: var(--paper-bg);
+            padding: 3.5rem 0; background: var(--paper-bg);
         }
         .process-intro { max-width: 620px; color: var(--violet); margin-bottom: 0; font-size: 0.95rem; }
         .process-grid {
@@ -189,7 +192,7 @@
         .step h4 { font-size: 1.2rem; margin-bottom: 0.8rem; }
         .step p { color: var(--violet); font-size: 0.88rem; }
 
-        .location-section { padding: 7rem 0; background: var(--white); }
+        .location-section { padding: 3.5rem 0; background: var(--white); }
         .location-grid {
             display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start;
         }
@@ -228,7 +231,7 @@
         .review-author { color: var(--teal); font-weight: 600; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 2px; }
 
         .cta-section {
-            padding: 5rem 0; background: var(--teal); color: var(--white); text-align: center;
+            padding: 2.5rem 0; background: var(--teal); color: var(--white); text-align: center;
         }
         .cta-section h2 { color: var(--white); font-size: 2rem; margin-bottom: 0.8rem; }
         .cta-section p { opacity: 0.85; max-width: 500px; margin: 0 auto 2rem; font-size: 0.95rem; }
@@ -240,7 +243,7 @@
         .cta-buttons .btn-secondary:hover { background: rgba(255,255,255,0.15); color: var(--white); border-color: var(--white); }
 
         footer {
-            padding: 5rem 0 2rem; background: var(--ink-deep); color: rgba(255,255,255,0.7);
+            padding: 2.5rem 0 1.5rem; background: var(--ink-deep); color: rgba(255,255,255,0.7);
         }
         .footer-grid {
             display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;
@@ -285,7 +288,7 @@
                 border-bottom: 2px solid var(--teal); padding: 16px;
                 box-shadow: 0 8px 24px rgba(0,0,0,0.1); z-index: 999;
             }
-            .hero { grid-template-columns: 1fr; padding: 4rem 0; text-align: center; gap: 3rem; }
+            .hero { grid-template-columns: 1fr; padding: 2rem 0; text-align: center; gap: 3rem; }
             .hero h2 { font-size: 2.3rem; }
             .hero p { margin-left: auto; margin-right: auto; }
             .cta-group { justify-content: center; }
@@ -308,9 +311,9 @@
 <div class="top-bar">
     <div class="container">
         <div class="top-bar-left">
-            <span>&#9742; <a href="tel:02825882706">028 2588 2706</a></span>
-            <span>&#9993; <a href="mailto:getitframedni@gmail.com">getitframedni@gmail.com</a></span>
-            <span>&#9906; Portglenone, Northern Ireland</span>
+            <span>&#9742; <a href="tel:02825882706">028 2588 2706</a> / <a href="tel:07763842761">077 6384 2761</a></span>
+            <span>&#9993; <a href="mailto:GetItFramedNI@gmail.com">Email Us</a></span>
+            <span>&#9906; Portglenone, Co. Antrim, Northern Ireland</span>
         </div>
         <div class="top-bar-right">Trade partner for photographers &amp; artists</div>
     </div>
@@ -324,7 +327,7 @@
         <nav id="mainNav">
             <a href="#about">About</a>
             <a href="#services">Services</a>
-            <a href="#">Gallery</a>
+            <a href="gallery.html">Gallery</a>
             <a href="#">Trade</a>
             <a href="#contact" class="nav-cta">Get in Touch</a>
         </nav>
@@ -337,8 +340,9 @@
 <section class="container hero">
     <div>
         <span class="section-label">Your Framing Partner</span>
-        <h2>For client deliveries <em>&amp; exhibitions.</em></h2>
-        <p>Get It Framed NI is a professional print &amp; framing studio, trusted by photographers and artists who need consistent results at scale &mdash; without losing the care you'd expect for a one-off piece.</p>
+        <h2>Printing, framing and more&hellip; <em>all under one roof</em></h2>
+        <p style="font-size: 1.15rem; margin-bottom: 0.5rem;">Catering for everyone's needs from retail buyers to trade professionals</p>
+        <p>Operating locally for over 15 years, Get It Framed NI is a professional print &amp; framing studio operating in the heart of Northern Ireland and shipping worldwide. Supplying prints, mounts, frames, canvases, albums and a variety of similar services and gifts; we cater for everyone from the home improver to photographers, artists and the business world.</p>
         <div class="cta-group">
             <a href="#contact" class="btn btn-primary">Get in Touch</a>
             <a href="#services" class="btn btn-secondary">Explore Services</a>
@@ -349,12 +353,94 @@
     </div>
 </section>
 
+<section id="services" class="services-section">
+    <div class="container">
+        <h2 class="serif services-heading" style="font-size: 2rem; color: #ffffff;">Our Services</h2>
+    </div>
+    <div class="container">
+        <div class="services-grid">
+            <div class="ga-card bg-teal">
+                <h3>Prints</h3>
+                <img class="ga-card-img" src="img/svc-photo-printing.webp" alt="Hand holding mounted photo prints including sunset and landscape photographs">
+                <p>Gloss, lustre, giclee, canvas and fine art prints. We print from mobile photos, memory cards, online galleries and files from amateur and professional photographers.</p>
+                <a href="prints.html" class="ga-card-btn">More</a>
+            </div>
+            <div class="ga-card bg-rose">
+                <h3>Canvas Printing</h3>
+                <img class="ga-card-img" src="img/svc-canvas.webp" alt="Canvas being stretched and stapled onto a wooden stretcher frame">
+                <p>Rolled, stretched only, or stretched and framed</p>
+                <a href="#" class="ga-card-btn">More</a>
+            </div>
+            <div class="ga-card bg-violet">
+                <h3>Mounting</h3>
+                <img class="ga-card-img" src="img/svc-photo-printing.webp" alt="Hand holding mounted photo prints including sunset and landscape photographs">
+                <p>Photo mounts, single, multi-aperture, round, oval &amp; custom shapes. Bulk orders welcome. Permanent mounting onto mount board, foam board &amp; MDF. Overseal options available</p>
+                <a href="#" class="ga-card-btn">More</a>
+            </div>
+            <div class="ga-card bg-gold">
+                <h3>Framing</h3>
+                <img class="ga-card-img" src="img/svc-framing.webp" alt="Stack of wooden picture frame mouldings in various finishes">
+                <p>We frame prints, canvases, artwork, needlework, football shirts, memorabilia, jigsaws and unique items. Minor frame repairs also available.</p>
+                <a href="#" class="ga-card-btn">More</a>
+            </div>
+            <div class="ga-card bg-steel">
+                <h3>Glass</h3>
+                <img class="ga-card-img" src="img/svc-glass.webp" alt="Framed ZX Spectrum computer behind glass in deep box frame with red mount">
+                <p>Replace old, scratched or broken glass. Float, art glass with UV protection, museum-quality plastic glazing, and mirrored glass. All available</p>
+                <a href="#" class="ga-card-btn">More</a>
+            </div>
+            <div class="ga-card bg-violet">
+                <h3>Artist Services</h3>
+                <img class="ga-card-img" src="img/svc-artist.webp" alt="Mounted and packaged art prints of farm animals and countryside scenes">
+                <p>Digitising originals, reprints on various media, mounting and framing of originals and reprints. Portfolio albums to showcase your work.</p>
+                <a href="#" class="ga-card-btn">More</a>
+            </div>
+            <div class="ga-card bg-rose">
+                <h3>Photographer Services</h3>
+                <img class="ga-card-img" src="img/svc-photographer.webp" alt="Collection of mounted landscape photographs laid out on studio table">
+                <p>Prints on various media, mounted etc</p>
+                <a href="#" class="ga-card-btn">More</a>
+            </div>
+            <div class="ga-card bg-sage">
+                <h3>Storybook Albums</h3>
+                <img class="ga-card-img" src="img/svc-albums.webp" alt="Lay flat storybook photo albums in various cover finishes">
+                <p>Lay flat storybook albums on high quality lustre paper. Leather or linen covers in a range of colours. Album design service available.</p>
+                <a href="#" class="ga-card-btn">More</a>
+            </div>
+            <div class="ga-card bg-plum">
+                <h3>Digitising</h3>
+                <img class="ga-card-img" src="img/svc-digitising.webp" alt="Collection of film negatives and slides ready for digitising">
+                <p>Digitise artwork, old photos, negatives, slides and albums. Photo restoration and VHS tape conversion. Digital images provided on your memory device</p>
+                <a href="#" class="ga-card-btn">More</a>
+            </div>
+            <div class="ga-card bg-teal2">
+                <h3>Photo Products</h3>
+                <img class="ga-card-img" src="img/svc-gifts.webp" alt="Glass photo coaster with sunset seascape print held in hand">
+                <p>Keyrings, coasters, photo blocks, fridge magnets, glitter and snow blocks, and seasonal Christmas gifts.</p>
+                <a href="#" class="ga-card-btn">More</a>
+            </div>
+            <div class="ga-card bg-ink">
+                <h3>Laser Engraving</h3>
+                <img class="ga-card-img" src="img/svc-engraving.webp" alt="Laser engraved wooden keyring with Armstrong Gordon logo">
+                <p>Custom laser engraving onto wooden gifts for private and corporate clients. Keyrings, coasters, bottle openers and more.</p>
+                <a href="#" class="ga-card-btn">More</a>
+            </div>
+            <div class="ga-card bg-gold">
+                <h3>Commercial Printing</h3>
+                <img class="ga-card-img" src="img/svc-engraving.webp" alt="Business cards and flyers for commercial printing">
+                <p>Business cards, flyers, pull up banners, PVC banners, leaflets. Design available</p>
+                <a href="#" class="ga-card-btn">More</a>
+            </div>
+        </div>
+    </div>
+</section>
+
 <section id="about" class="about-section">
     <div class="container">
         <div class="about-grid">
             <div>
                 <span class="section-label">The Studio Standard</span>
-                <h3 class="serif" style="font-size: 1.9rem; line-height: 1.25;">Professional framing &amp; printing &mdash; for trade and public.</h3>
+                <h3 class="serif" style="font-size: 1.9rem; line-height: 1.25;">Professional printing &amp; framing services for public and trade.</h3>
                 <div class="about-image" style="margin-top: 2rem;">
                     <img src="img/about-studio.webp" alt="Framed artwork and prints in the Get It Framed NI studio">
                 </div>
@@ -368,126 +454,28 @@
                     <li>Careful attention to borders and finish</li>
                     <li>Studio standards for the general public</li>
                 </ul>
+                <div style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid #e0e0e0;">
+                    <span class="section-label">Our Print Studio</span>
+                    <p style="color: var(--violet); font-size: 0.9rem;">At Get It Framed NI, we believe your favourite memories, digital photography, and artwork deserve to live on walls, not just on screens and hard drives. From our dedicated print and framing studio in the heart of Portglenone, we transform your digital files into breathtaking, tangible prints.</p>
+                    <p style="color: var(--violet); font-size: 0.9rem;">Whether you are looking to print a single cherished family smartphone photo or need a full collection of exhibition-ready fine art reproductions, we treat every single image with the meticulous care and precision it deserves. Operating locally for over 15 years, we combine state-of-the-art print technology with a true passion for the craft, ensuring vibrant colours, rich blacks, and details that truly stand out.</p>
+                </div>
             </div>
         </div>
     </div>
 </section>
 
-<section id="services" class="services-section">
+<section class="cta-section">
     <div class="container">
-        <span class="section-label">Our Services</span>
-        <h2 class="serif services-heading" style="font-size: 2rem;">Everything your artwork needs, under one roof.</h2>
-        <p class="services-sub">From printing to framing, digitising to engraving &mdash; tailored options available for trade customers.</p>
-    </div>
-    <div class="container">
-        <div class="services-grid">
-            <div class="ga-card bg-teal">
-                <span class="ga-card-label">Print Services</span>
-                <h3>Photo Printing</h3>
-                <img class="ga-card-img" src="img/svc-photo-printing.webp" alt="Hand holding mounted photo prints including sunset and landscape photographs">
-                <p>Gloss, lustre, giclee, canvas and fine art prints. We print from mobile photos, memory cards, online galleries and files from amateur and professional photographers.</p>
-                <a href="#" class="ga-card-btn">More</a>
-            </div>
-            <div class="ga-card bg-rose">
-                <span class="ga-card-label">Canvas</span>
-                <h3>Canvas Printing</h3>
-                <img class="ga-card-img" src="img/svc-canvas.webp" alt="Canvas being stretched and stapled onto a wooden stretcher frame">
-                <p>Rolled, stretched, or stretched and framed. Polycotton, artist canvas and natural cotton media with overseal options.</p>
-                <a href="#" class="ga-card-btn">More</a>
-            </div>
-            <div class="ga-card bg-violet">
-                <span class="ga-card-label">Presentation</span>
-                <h3>Mounting</h3>
-                <img class="ga-card-img" src="img/svc-mounting.webp" alt="Close-up of black wooden picture frame corner with white mount board">
-                <p>Permanent mount board, foam board and computerised mount cutting. Single, multi-aperture, round, oval and custom shapes. Bulk orders welcome.</p>
-                <a href="#" class="ga-card-btn">More</a>
-            </div>
-            <div class="ga-card bg-gold">
-                <span class="ga-card-label">Bespoke</span>
-                <h3>Framing</h3>
-                <img class="ga-card-img" src="img/svc-framing.webp" alt="Stack of wooden picture frame mouldings in various finishes">
-                <p>We frame prints, canvases, artwork, needlework, football shirts, memorabilia, jigsaws and unique items. Minor frame repairs also available.</p>
-                <a href="#" class="ga-card-btn">More</a>
-            </div>
-            <div class="ga-card bg-sage">
-                <span class="ga-card-label">Albums</span>
-                <h3>Photo Albums</h3>
-                <img class="ga-card-img" src="img/svc-albums.webp" alt="Lay flat storybook photo albums in various cover finishes">
-                <p>Lay flat storybook albums on high quality lustre paper. Leather or linen covers in a range of colours. Album design service included.</p>
-                <a href="#" class="ga-card-btn">More</a>
-            </div>
-            <div class="ga-card bg-steel">
-                <span class="ga-card-label">Glazing</span>
-                <h3>Glass</h3>
-                <img class="ga-card-img" src="img/svc-glass.webp" alt="Framed ZX Spectrum computer behind glass in deep box frame with red mount">
-                <p>Replace old, scratched or broken glass. Float, art glass with UV protection, museum-quality plastic glazing, and mirrored glass.</p>
-                <a href="#" class="ga-card-btn">More</a>
-            </div>
-            <div class="ga-card bg-plum">
-                <span class="ga-card-label">Digital</span>
-                <h3>Digitising</h3>
-                <img class="ga-card-img" src="img/svc-digitising.webp" alt="Collection of film negatives and slides ready for digitising">
-                <p>Digitise artwork, old photos, negatives, slides and albums. Photo restoration and VHS tape conversion. Digital images on a memory device.</p>
-                <a href="#" class="ga-card-btn">More</a>
-            </div>
-            <div class="ga-card bg-ink">
-                <span class="ga-card-label">Engraving</span>
-                <h3>Laser Engraving</h3>
-                <img class="ga-card-img" src="img/svc-engraving.webp" alt="Laser engraved wooden keyring with Armstrong Gordon logo">
-                <p>Custom laser engraving onto wooden gifts for private and corporate clients. Keyrings, coasters, bottle openers and more.</p>
-                <a href="#" class="ga-card-btn">More</a>
-            </div>
-            <div class="ga-card bg-teal2">
-                <span class="ga-card-label">Gifts</span>
-                <h3>Photo Products</h3>
-                <img class="ga-card-img" src="img/svc-gifts.webp" alt="Glass photo coaster with sunset seascape print held in hand">
-                <p>Keyrings, coasters, photo blocks, fridge magnets, glitter and snow blocks, and seasonal Christmas gifts.</p>
-                <a href="#" class="ga-card-btn">More</a>
-            </div>
-            <div class="ga-card bg-rose">
-                <span class="ga-card-label">Trade</span>
-                <h3>Photographer Services</h3>
-                <img class="ga-card-img" src="img/svc-photographer.webp" alt="Collection of mounted landscape photographs laid out on studio table">
-                <p>Prints, mounted prints, photo editing and competition-ready prints. Camera club members welcome. Storybook albums for events.</p>
-                <a href="#" class="ga-card-btn">More</a>
-            </div>
-            <div class="ga-card bg-violet">
-                <span class="ga-card-label">Trade</span>
-                <h3>Artist Services</h3>
-                <img class="ga-card-img" src="img/svc-artist.webp" alt="Mounted and packaged art prints of farm animals and countryside scenes">
-                <p>Digitising originals, reprints on various media, mounting and framing of originals and reprints. Portfolio albums to showcase your work.</p>
-                <a href="#" class="ga-card-btn">More</a>
-            </div>
+        <h2 class="serif">Ready to get started?</h2>
+        <p>Bring in your piece or get in touch.<br>We're happy to advise on the best approach for your project.</p>
+        <div class="cta-buttons">
+            <a href="mailto:GetItFramedNI@gmail.com" class="btn btn-primary">Get in Touch</a>
+            <a href="tel:02825882706" class="btn btn-secondary">Call 028 2588 2706</a>
         </div>
     </div>
 </section>
 
-<section class="process-section">
-    <div class="container">
-        <span class="section-label">The Process</span>
-        <h2 class="serif" style="font-size: 2rem; margin-bottom: 1rem;">How It Works</h2>
-        <p class="process-intro">Bring in the piece you want framed, or send the file you'd like printed. We'll help you choose a size and presentation that suits the subject &mdash; then produce a clean, studio-finished result.</p>
-        <div class="process-grid">
-            <div class="step">
-                <span class="step-num">01</span>
-                <h4>Choose the look</h4>
-                <p>Frame profile, mount colour and finish &mdash; balanced for the artwork and the environment it will live in.</p>
-            </div>
-            <div class="step">
-                <span class="step-num">02</span>
-                <h4>Produce with care</h4>
-                <p>Accurate glass cutting, precise mounting and clean borders &mdash; all handled in-house under one roof.</p>
-            </div>
-            <div class="step">
-                <span class="step-num">03</span>
-                <h4>Collect &amp; deliver</h4>
-                <p>Ready for your wall, your exhibition, or delivered directly to your client. Trade setups available for repeat orders.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="location" class="location-section">
+<section id="location" class="location-section" style="padding-bottom: 3.5rem;">
     <div class="container">
         <div class="location-grid">
             <div class="location-info">
@@ -495,62 +483,26 @@
                 <h3 class="serif">Visit the Studio</h3>
                 <div class="location-detail">
                     <span class="detail-label">Address</span>
-                    <p>26 Townhill Road<br>Portglenone, BT44 8AD<br>Northern Ireland</p>
+                    <p>Unit 9, 26 Townhill Road<br>Portglenone, BT44 8AD<br>Northern Ireland</p>
                 </div>
                 <div class="location-detail">
                     <span class="detail-label">Phone</span>
-                    <p><a href="tel:02825882706">028 2588 2706</a></p>
+                    <p><a href="tel:02825882706">028 2588 2706</a> / <a href="tel:07763842761">077 6384 2761</a></p>
                 </div>
                 <div class="location-detail">
                     <span class="detail-label">Email</span>
-                    <p><a href="mailto:getitframedni@gmail.com">getitframedni@gmail.com</a></p>
+                    <p><a href="mailto:GetItFramedNI@gmail.com">GetItFramedNI@gmail.com</a></p>
                 </div>
                 <div class="location-detail">
                     <span class="detail-label">Turnaround</span>
                     <p>Varies by service &mdash; tell us your deadline and we'll do our best to meet it.</p>
                 </div>
             </div>
-            <div class="map-wrapper">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2305.5!2d-6.4583!3d54.8583!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4861a73db0c3f8a1%3A0x9e5ec23a826c5a06!2s26+Townhill+Rd%2C+Portglenone%2C+Ballymena+BT44+8AD!5e0!3m2!1sen!2suk!4v1" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div>
+                <div class="map-wrapper">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2305.5!2d-6.4583!3d54.8583!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4861a73db0c3f8a1%3A0x9e5ec23a826c5a06!2s26+Townhill+Rd%2C+Portglenone%2C+Ballymena+BT44+8AD!5e0!3m2!1sen!2suk!4v1" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
             </div>
-        </div>
-    </div>
-</section>
-
-<section class="reviews-section">
-    <div class="container">
-        <div class="reviews-heading">
-            <span class="section-label">Testimonials</span>
-            <h2 class="serif">Customer Feedback</h2>
-            <p>What our public and trade customers say.</p>
-        </div>
-        <div class="review-grid">
-            <div class="review-card">
-                <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                <p>"Consistent colour and immaculate mounting. The finish looks premium every time. Exactly what I need for client delivery."</p>
-                <span class="review-author">Photographer</span>
-            </div>
-            <div class="review-card">
-                <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                <p>"Excellent advice on frames and proportions. My exhibition pieces looked cohesive and professionally presented."</p>
-                <span class="review-author">Artist</span>
-            </div>
-            <div class="review-card">
-                <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                <p>"Friendly service and quick turnaround. The print quality was spot on and the frame made it look better than I imagined."</p>
-                <span class="review-author">Customer</span>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="cta-section" id="contact">
-    <div class="container">
-        <h2>Ready to get started?</h2>
-        <p>Bring in your piece or get in touch. We're happy to advise on the best approach for your project.</p>
-        <div class="cta-buttons">
-            <a href="mailto:getitframedni@gmail.com" class="btn btn-primary">Get in Touch</a>
-            <a href="tel:02825882706" class="btn btn-secondary">Call 028 2588 2706</a>
         </div>
     </div>
 </section>
@@ -560,19 +512,19 @@
         <div class="footer-grid">
             <div class="footer-about">
                 <h4>Get It Framed NI</h4>
-                <p>A friendly local studio for framing, printing and digitisation &mdash; serving public and trade customers from Portglenone, Northern Ireland.</p>
+                <p>A friendly local studio for printing, framing and digitisation &mdash; based in Portglenone, serving public and trade customers locally, nationally &amp; internationally.</p>
             </div>
             <div>
                 <h4>Quick Links</h4>
                 <a href="#">Home</a>
                 <a href="#about">About</a>
                 <a href="#services">Services</a>
-                <a href="#">Gallery</a>
+                <a href="gallery.html">Gallery</a>
                 <a href="#contact">Contact</a>
             </div>
             <div>
                 <h4>Services</h4>
-                <a href="#">Photo Printing</a>
+                <a href="prints.html">Photo Printing</a>
                 <a href="#">Canvas &amp; Framing</a>
                 <a href="#">Mounting</a>
                 <a href="#">Digitising</a>
@@ -581,11 +533,11 @@
             </div>
             <div>
                 <span class="contact-label">Studio</span>
-                <p class="contact-val">26 Townhill Road<br>Portglenone, BT44 8AD</p>
+                <p class="contact-val">Unit 9, 26 Townhill Road<br>Portglenone, BT44 8AD</p>
                 <span class="contact-label">Phone</span>
-                <p class="contact-val" style="font-size: 0.95rem;">028 2588 2706</p>
+                <p class="contact-val" style="font-size: 0.95rem;">028 2588 2706<br>077 6384 2761</p>
                 <span class="contact-label">Email</span>
-                <p class="contact-val" style="font-size: 0.85rem;">getitframedni@gmail.com</p>
+                <p class="contact-val" style="font-size: 0.85rem;">GetItFramedNI@gmail.com</p>
             </div>
         </div>
         <div class="footer-bottom">
@@ -593,6 +545,17 @@
         </div>
     </div>
 </footer>
+
+<script>
+document.querySelectorAll('.ga-card').forEach(function(card) {
+    card.addEventListener('click', function() {
+        var link = card.querySelector('.ga-card-btn');
+        if (link && link.href && link.href !== '#' && !link.href.endsWith('#')) {
+            window.location.href = link.href;
+        }
+    });
+});
+</script>
 
 </body>
 </html>
