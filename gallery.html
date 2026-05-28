@@ -413,23 +413,34 @@
     </div>
 </section>
 
-<section style="padding: 3.5rem 0; background: var(--white);">
+<style>
+    .location-section-inner { padding: 3.5rem 0; background: var(--white); }
+    .location-grid-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
+    .location-detail-inner { margin-bottom: 1.8rem; }
+    .location-detail-inner .detail-label { display: block; font-size: 0.68rem; color: var(--teal); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 0.4rem; }
+    .location-detail-inner p { margin: 0; color: var(--violet); font-size: 0.95rem; line-height: 1.6; }
+    .location-detail-inner a { color: var(--ink-deep); text-decoration: none; font-weight: 500; }
+    .location-detail-inner a:hover { color: var(--teal); }
+    @media (max-width: 768px) { .location-grid-inner { grid-template-columns: 1fr; } }
+</style>
+<section class="location-section-inner">
     <div class="container">
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center;">
+        <div class="location-grid-inner">
             <div>
                 <span class="section-label">Find Us</span>
                 <h3 class="serif" style="font-size: 1.6rem; margin-bottom: 1.5rem;">Visit the Studio</h3>
-                <div style="margin-bottom: 1rem;">
-                    <span style="display: block; font-size: 0.68rem; color: var(--teal); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 0.3rem;">Address</span>
-                    <p style="margin: 0;">Unit 9, 26 Townhill Road<br>Portglenone, BT44 8AD<br>Northern Ireland</p>
+                <div class="location-detail-inner">
+                    <span class="detail-label">Address</span>
+                    <p>Unit 9, 26 Townhill Road<br>Portglenone, BT44 8AD<br>Northern Ireland</p>
                 </div>
-                <div style="margin-bottom: 1rem;">
-                    <span style="display: block; font-size: 0.68rem; color: var(--teal); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 0.3rem;">Phone</span>
-                    <p style="margin: 0;"><a href="tel:02825882706">028 2588 2706</a> / <a href="tel:07763842761">077 6384 2761</a></p>
+                <div class="location-detail-inner">
+                    <span class="detail-label">Phone</span>
+                    <p><a href="tel:02825882706">028 2588 2706</a></p>
+                    <p><a href="tel:07763842761">077 6384 2761</a></p>
                 </div>
-                <div style="margin-bottom: 1rem;">
-                    <span style="display: block; font-size: 0.68rem; color: var(--teal); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 0.3rem;">Email</span>
-                    <p style="margin: 0;"><a href="mailto:GetItFramedNI@gmail.com">GetItFramedNI@gmail.com</a></p>
+                <div class="location-detail-inner">
+                    <span class="detail-label">Email</span>
+                    <p><a href="mailto:GetItFramedNI@gmail.com">GetItFramedNI@gmail.com</a></p>
                 </div>
             </div>
             <div>
