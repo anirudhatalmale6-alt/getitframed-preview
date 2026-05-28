@@ -63,6 +63,21 @@
             text-transform: uppercase; letter-spacing: 1.5px; transition: 0.3s;
         }
         nav a:hover { color: var(--teal); }
+        .nav-dropdown { position: relative; }
+        .nav-dropdown > a::after { content: ' \25BE'; font-size: 0.6em; }
+        .dropdown-menu {
+            display: none; position: absolute; top: 100%; left: 0;
+            background: var(--white); min-width: 220px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.12); border-top: 2px solid var(--teal);
+            z-index: 1001; padding: 8px 0;
+        }
+        .nav-dropdown:hover .dropdown-menu { display: block; }
+        .dropdown-menu a {
+            display: block; padding: 8px 20px; font-size: 0.72rem;
+            font-weight: 500; text-transform: none; letter-spacing: 0.3px;
+            color: var(--ink-deep); text-decoration: none; white-space: nowrap;
+        }
+        .dropdown-menu a:hover { background: var(--paper-bg); color: var(--teal); }
         .nav-cta {
             background: var(--teal) !important; color: var(--white) !important;
             padding: 10px 22px !important; border: none; margin-left: 8px;
@@ -269,6 +284,13 @@
                 border-bottom: 2px solid var(--teal); padding: 16px;
                 box-shadow: 0 8px 24px rgba(0,0,0,0.1); z-index: 999;
             }
+            .nav-dropdown { position: static; }
+            .dropdown-menu {
+                position: static; box-shadow: none; border-top: none;
+                padding: 0 0 0 1rem; min-width: auto; display: none;
+            }
+            .nav-dropdown.open .dropdown-menu { display: block; }
+            .dropdown-menu a { padding: 6px 12px; font-size: 0.7rem; }
             .hero-overlay h1 { font-size: 1.9rem; }
             .hero-banner { height: 320px; }
             .intro-grid { grid-template-columns: 1fr; gap: 2.5rem; }
@@ -309,7 +331,23 @@
         </a>
         <nav id="mainNav">
             <a href="index.html#about">About</a>
-            <a href="index.html#services">Services</a>
+            <div class="nav-dropdown">
+                <a href="index.html#services">Services</a>
+                <div class="dropdown-menu">
+                    <a href="prints.html">Prints</a>
+                    <a href="#">Canvas Printing</a>
+                    <a href="#">Mounting</a>
+                    <a href="#">Framing</a>
+                    <a href="#">Glass</a>
+                    <a href="#">Artist Services</a>
+                    <a href="#">Photographer Services</a>
+                    <a href="#">Storybook Albums</a>
+                    <a href="#">Digitising</a>
+                    <a href="#">Photo Products</a>
+                    <a href="#">Laser Engraving</a>
+                    <a href="#">Commercial Printing</a>
+                </div>
+            </div>
             <a href="gallery.html">Gallery</a>
             <a href="index.html">Trade</a>
             <a href="index.html#contact" class="nav-cta">Get in Touch</a>
@@ -487,5 +525,15 @@
     </div>
 </footer>
 
+<script>
+document.querySelectorAll('.nav-dropdown > a').forEach(function(a) {
+    a.addEventListener('click', function(e) {
+        if (window.innerWidth <= 768) {
+            e.preventDefault();
+            a.parentElement.classList.toggle('open');
+        }
+    });
+});
+</script>
 </body>
 </html>
